@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Degknytet</title>
+    <title>Logga in</title>
     <link rel="stylesheet" href="/index.c92073ef.css">
-    <script src="/index.18dbc454.js" defer=""></script>
+    <script src="/login.333b87f1.js" defer=""></script>
 </head>
 <body>
     <nav>
@@ -18,9 +18,24 @@
     </nav>
 
     <main>
-        <div id="menuDiv">
+        <form>
+            <label for="usernameLogin">Användarnamn:</label><br>
+            <input type="text" id="usernameLogin"><br>
+
+            <label for="passwordLogin">Lösenord:</label><br>
+            <input type="text" id="passwordLogin"><br>
+
+            <button id="loginBtn">Logga in</button>
+        </form>
+        <br>
+
+        <div id="errorDivLogin">
 
         </div>
     </main>
+
+    <footer>
+        <p>Degknytet anno 2022</p>
+    </footer>
 </body>
 </html>
