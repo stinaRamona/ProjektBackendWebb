@@ -612,6 +612,13 @@ async function loginUser(username, password) {
     if (!response.ok) errorDivLogin.innerHTML = "Fel anv\xe4ndarnamn eller l\xf6senord";
     let data = await response.json();
     console.log(data);
+    //spara token 
+    //lägger in JWT token i local storage 
+    localStorage.setItem("token", data.response.token);
+    //lägge in användarnamn i local storage 
+    localStorage.setItem("user", username);
+    //Flyttar till min sida
+    location.href = "admin.html";
 }
 
 },{}]},["ed6Mz","47T64"], "47T64", "parcelRequire8844")

@@ -39,4 +39,14 @@ async function loginUser(username, password){
     let data = await response.json(); 
 
     console.log(data); 
+
+    //spara token 
+    //lägger in JWT token i local storage 
+    localStorage.setItem('token', data.response.token);
+
+    //lägge in användarnamn i local storage 
+    localStorage.setItem('user', username); 
+
+    //Flyttar till min sida
+    location.href="admin.html" 
 }
