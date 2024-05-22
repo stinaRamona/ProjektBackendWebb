@@ -615,6 +615,14 @@ function printAdminMenu(menu) {
         ${menuItem.dishName}<br>
         ${menuItem.price}<br>
         ${menuItem.description}<br>`;
+        //skapa knapp för att ta bort 
+        let deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Ta bort r\xe4tt";
+        //skickar id av den rätt som man vill ta bort till deleteFromMenu funktionen
+        deleteBtn.addEventListener("click", function() {
+            deleteFromMenu(menuItem._id);
+        });
+        item.appendChild(deleteBtn);
         menuListAdmin.appendChild(item);
     });
 }
@@ -652,7 +660,7 @@ async function addToMenu(dishName, price, description, allergens) {
     }
 }
 //ta bort något från menyn 
-async function deleteFromMenu() {
+async function deleteFromMenu(id) {
 //behöver id från menuItem
 }
 //Ändra något på menyn 
