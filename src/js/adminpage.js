@@ -30,11 +30,33 @@ addBtnEl.addEventListener('click', (event) => {
     }
 }); 
 
+//lägger till något till menyn
 async function addToMenu(dishName, price, description, allergens){
 
-    
-}
+    let newMenuItem = {
+        dishName: dishName, 
+        price: price, 
+        description: description, 
+        allergens: allergens
+    }; 
 
+    try {
+        let response = await fetch("https://projektbackend.onrender.com/api/menu", {
+            method: "POST", 
+            headers: {
+                'content-type': 'Application/json',
+                'Authorization': 'Bearer ' + storedToken 
+            },
+            body: JSON.stringify(newMenuItem)
+        }) 
+
+        let data = await response.json(); 
+
+        console.log(data)
+    } catch(error) {
+        console.error("Något gick fel" + error); 
+    }
+}
 
 
 //initiering av sidan 
