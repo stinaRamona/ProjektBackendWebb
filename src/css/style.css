@@ -1,0 +1,20 @@
+body{
+    background-color: #FFFDF8;
+    margin: 0px; 
+}
+
+main {
+    width: 950px; 
+    margin: 0 auto; 
+}
+
+/*För bilder*/
+#heroImgWrapper {
+    width: 99vw; 
+    opacity: 60%;
+}
+
+#heroImgWrapper img {
+    width:100%; 
+    height: auto;
+}
