@@ -611,18 +611,33 @@ async function init() {
 function printAdminMenu(menu) {
     menu.forEach((menuItem)=>{
         let item = document.createElement("article");
+        item.setAttribute("data-id", menuItem._id); //lagrar id för rätterna
+        //rätter skrivs ut med content editable så att de kan ändras enkelt
         item.innerHTML = `
-        ${menuItem.dishName}<br>
-        ${menuItem.price}<br>
-        ${menuItem.description}<br>`;
+        <div contenteditable="true" class="dishName">${menuItem.dishName}</div><br>
+        <div contenteditable="true" class="price">${menuItem.price}</div><br>
+        <div contenteditable="true" class="description">${menuItem.description}</div><br>`;
         //skapa knapp för att ta bort 
         let deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Ta bort r\xe4tt";
+        //skapa knapp för att uppdatera om man ändrat något
+        let updateBtn = document.createElement("button");
+        updateBtn.textContent = "Uppdatera r\xe4tt";
         //skickar id av den rätt som man vill ta bort till deleteFromMenu funktionen
         deleteBtn.addEventListener("click", function() {
             deleteFromMenu(menuItem._id);
         });
+        //skickar id och uppdaterad information av den rätt som ska uppdateras till updateMenuItem
+        updateBtn.addEventListener("click", function() {
+            let updatedItem = {
+                dishName: item.querySelector(".dishName").innerText,
+                price: item.querySelector(".price").innerText,
+                description: item.querySelector(".description").innerText
+            };
+            updateMenuItem(menuItem._id, updatedItem);
+        });
         item.appendChild(deleteBtn);
+        item.appendChild(updateBtn);
         menuListAdmin.appendChild(item);
     });
 }
@@ -672,13 +687,25 @@ async function deleteFromMenu(_id) {
         let data = await response.json();
         console.log(data);
     } catch (error) {
-        console.log("N\xe5got gick fel " + error);
+        console.log("Gick inte att radera " + error);
     }
 }
 //Ändra något på menyn 
-async function updateMenuItem() {
-//behöver läsa in från body och uppdatera det som är nytt. 
-//id behövs också här 
+async function updateMenuItem(_id, menuItem) {
+    try {
+        let response = await fetch("https://projektbackend.onrender.com/api/menu" + _id, {
+            method: "PUT",
+            headers: {
+                "content-type": "Application/json",
+                "Authorization": "Bearer " + storedToken
+            },
+            body: JSON.stringify(menuItem)
+        });
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log("Gick inte att uppdatera " + error);
+    }
 }
 //initiering av sidan 
 window.onload = init();
