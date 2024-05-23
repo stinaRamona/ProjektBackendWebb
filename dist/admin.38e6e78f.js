@@ -660,8 +660,20 @@ async function addToMenu(dishName, price, description, allergens) {
     }
 }
 //ta bort något från menyn 
-async function deleteFromMenu(id) {
-//behöver id från menuItem
+async function deleteFromMenu(_id) {
+    try {
+        let response = await fetch("https://projektbackend.onrender.com/api/menu" + _id, {
+            method: "DELETE",
+            headers: {
+                "content-type": "Application/json",
+                "Authorization": "Bearer " + storedToken
+            }
+        });
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log("N\xe5got gick fel " + error);
+    }
 }
 //Ändra något på menyn 
 async function updateMenuItem() {

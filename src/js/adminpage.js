@@ -98,10 +98,22 @@ async function addToMenu(dishName, price, description, allergens){
 }
 
 //ta bort något från menyn 
-async function deleteFromMenu(id){
+async function deleteFromMenu(_id){
+    try {
+        let response = await fetch("https://projektbackend.onrender.com/api/menu" + _id, {
+            method: "DELETE", 
+            headers: {
+                'content-type': 'Application/json',
+                'Authorization': 'Bearer ' + storedToken
+            } 
+        })
 
-    //behöver id från menuItem
+        let data = await response.json(); 
 
+        console.log(data); 
+    } catch(error) {
+        console.log("Något gick fel " + error); 
+    }
 }
 
 //Ändra något på menyn 
