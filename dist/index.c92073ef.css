@@ -8,16 +8,6 @@ main {
   margin: 0 auto;
 }
 
-#heroImgWrapper {
-  opacity: .6;
-  width: 99vw;
-}
-
-#heroImgWrapper img {
-  width: 100%;
-  height: auto;
-}
-
 #logoWrapper {
   width: 200px;
   height: auto;
@@ -64,5 +54,15 @@ nav a:hover {
 
 #menuDiv {
   text-align: center;
+}
+
+footer {
+  z-index: 100;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 0;
 }
 /*# sourceMappingURL=index.c92073ef.css.map */
