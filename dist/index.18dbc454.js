@@ -602,9 +602,9 @@ function printMenu(menu) {
     menu.forEach((menuItem)=>{
         let item = document.createElement("article");
         item.innerHTML = `
-        ${menuItem.dishName}<br>
-        ${menuItem.price}<br>
-        ${menuItem.description}<br>`;
+        ${menuItem.dishName}<br><br>
+        ${menuItem.price} kr <br><br>
+        ${menuItem.description}<br><br>`;
         menuDivEl.appendChild(item);
     });
 }

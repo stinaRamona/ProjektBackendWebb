@@ -56,13 +56,37 @@ nav a:hover {
 }
 /*För menyn (mat)*/
 #menuDiv {
-    text-align: center;
+    text-align: center; 
+    font-size: 1.25em; 
 } 
+
+#blobWrapper {
+    width: 300px; 
+    height: auto; 
+    position: relative;
+    display: inline-block;
+}
+
+#blobWrapper img {
+    display: block;
+    width: 100%; 
+    height: auto; 
+}
+
+#blobText {
+    font-size: 1.5em;
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center; 
+    padding: 10px 20px;
+}
 
 /*footer*/
 footer {
     width: 100%; 
-    position: absolute; 
+    position: fixed; 
     z-index: 100; 
     bottom: 0; 
     text-align: center;

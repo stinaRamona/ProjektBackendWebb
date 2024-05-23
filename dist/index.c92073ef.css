@@ -54,6 +54,30 @@ nav a:hover {
 
 #menuDiv {
   text-align: center;
+  font-size: 1.25em;
+}
+
+#blobWrapper {
+  width: 300px;
+  height: auto;
+  display: inline-block;
+  position: relative;
+}
+
+#blobWrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#blobText {
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 footer {
@@ -62,7 +86,7 @@ footer {
   color: #fff;
   width: 100%;
   font-size: 1.5em;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 /*# sourceMappingURL=index.c92073ef.css.map */
