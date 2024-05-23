@@ -110,6 +110,7 @@ async function addToMenu(dishName, price, description, allergens){
         let data = await response.json(); 
 
         console.log(data)
+        window.location.reload(); //så sidan laddas om
     } catch(error) {
         console.error("Något gick fel" + error); 
     }
@@ -129,6 +130,7 @@ async function deleteFromMenu(_id){
         let data = await response.json(); 
 
         console.log(data); 
+        window.location.reload(); //så sidan laddas om
     } catch(error) {
         console.log("Gick inte att radera " + error); 
     }
@@ -150,7 +152,7 @@ async function updateMenuItem(_id, menuItem){
         let data = await response.json(); 
 
         console.log(data); 
-
+        window.location.reload(); //så sidan laddas om
     } catch(error) {
         console.log("Gick inte att uppdatera " + error); 
     }
