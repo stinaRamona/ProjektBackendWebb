@@ -17,4 +17,52 @@ main {
   width: 100%;
   height: auto;
 }
+
+#logoWrapper {
+  width: 200px;
+  height: auto;
+  padding: 1%;
+}
+
+nav {
+  z-index: 99;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+nav ul img {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  padding: 1em;
+  display: inline;
+}
+
+nav a {
+  color: #000;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #505050;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+#menuDiv {
+  text-align: center;
+}
 /*# sourceMappingURL=index.c92073ef.css.map */
