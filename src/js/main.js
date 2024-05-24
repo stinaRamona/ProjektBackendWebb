@@ -24,8 +24,7 @@ function printMenu(menu){
         let item = document.createElement("article"); 
 
         item.innerHTML = `
-        ${menuItem.dishName}<br><br>
-        ${menuItem.price} kr <br><br>
+        <div class="cursiveTxt">${menuItem.dishName}..........${menuItem.price} kr</div> <br>
         ${menuItem.description}<br><br>`
 
         menuDivEl.appendChild(item); 
