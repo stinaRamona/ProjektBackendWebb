@@ -140,23 +140,39 @@ input {
     margin-left: 5%;  
     font-weight: bold;
     font-size: 1.25em;
+} 
+
+/*admin sidan*/
+#menuListAdmin {
+    max-width: 36em; 
+    margin: 0 auto; 
+    font-size: 1.25em;
+}
+
+#updateMenuHeader {
+    margin-top: 8%; 
 }
 
 /*Knappar*/
-#loginBtn {
+button {
     background-color: transparent;
     border: solid 2px #000000; 
     padding: 1%; 
     border-radius: 4px;
-    font-size: 1.25em;
     font-family: "La Belle Aurore", cursive;
+    font-size: 1.25em;
     font-weight: bold; 
     cursor: pointer;
     margin: 1.5%;
 } 
 
-#loginBtn:hover {
+button:hover {
     background-color: #009B79;
+}
+
+#deleteBtn:hover {
+    background-color: rgb(200, 0, 0);
+    color:#FFFDF8; 
 }
 
 

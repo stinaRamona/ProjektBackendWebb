@@ -43,7 +43,8 @@ function printAdminMenu(menu){
 
         //skapa knapp för att ta bort 
         let deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Ta bort rätt"; 
+        deleteBtn.textContent = "Ta bort rätt";
+        deleteBtn.setAttribute('id', 'deleteBtn');  
 
         //skapa knapp för att uppdatera om man ändrat något
         let updateBtn = document.createElement("button"); 

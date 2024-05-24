@@ -136,7 +136,17 @@ input {
   font-weight: bold;
 }
 
-#loginBtn {
+#menuListAdmin {
+  max-width: 36em;
+  margin: 0 auto;
+  font-size: 1.25em;
+}
+
+#updateMenuHeader {
+  margin-top: 8%;
+}
+
+button {
   cursor: pointer;
   background-color: #0000;
   border: 2px solid #000;
@@ -148,8 +158,13 @@ input {
   font-weight: bold;
 }
 
-#loginBtn:hover {
+button:hover {
   background-color: #009b79;
+}
+
+#deleteBtn:hover {
+  color: #fffdf8;
+  background-color: #c80000;
 }
 
 footer {
