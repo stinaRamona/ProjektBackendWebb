@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Roboto&display=swap" rel="stylesheet">
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/e717d88fa8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -19,11 +21,9 @@
         </div>
 
         <ul id="navList">
-            <li><a href="/index.html">Meny</a></li>
-            <li><a href="/om.html">Om oss</a></li>
-            <li><a href="/login.html">För personal</a></li>
-            <li><a href="/admin.html">Admin TA BORT SEN</a></li>
+            <li id="logOut"><a href="/index.html">Logga ut</a></li>
         </ul>
+        
     </nav>
 
     <div id="headerImgWrapper">
@@ -57,15 +57,18 @@
     <h2 id="updateMenuHeader">Uppdatera eller ta bort en rätt från menyn</h2>
     <div id="menuListAdmin">
         
-    </div>
+    </div> 
     </main>
 
-    <div id="footerImgWrapper">
-        <img src="/wave.6f1e102e.svg" alt="footer wave">
-    </div>
-
     <footer>
-        <p>Degknytet anno 2022</p>
+        <div id="footerImgWrapper">
+            <img src="/wave.6f1e102e.svg" alt="footer wave">
+                <p id="footerTxt1">Middagsgatan 22<br>
+                589 22 Linköping</p>
+
+                <p id="footerTxt2">Tel: 0707555544<br>
+                <i class="fa-brands fa-instagram fa-lg" style="color: #fff"></i> @degknytet</p>
+        </div>
     </footer>
 
 </body>

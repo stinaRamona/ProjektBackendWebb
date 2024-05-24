@@ -153,6 +153,12 @@ input {
     margin-top: 8%; 
 }
 
+#logOut {
+    text-align: center;
+    padding: 0; 
+    margin-right: 2.75em;
+}
+
 /*Knappar*/
 button {
     background-color: transparent;
