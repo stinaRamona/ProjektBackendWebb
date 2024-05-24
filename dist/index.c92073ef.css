@@ -93,6 +93,7 @@ nav a:hover {
 
 #blobText {
   text-align: center;
+  white-space: nowrap;
   padding: 10px 20px;
   font-size: 3em;
   font-weight: bold;
@@ -100,6 +101,13 @@ nav a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#aboutTxt {
+  max-width: 34em;
+  margin: 0 auto;
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 
 footer {
