@@ -167,13 +167,46 @@ button:hover {
   background-color: #c80000;
 }
 
-footer {
-  z-index: 100;
+#footerImgWrapper {
+  width: 99vw;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+}
+
+#footerImgWrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#footerTxt1 {
   text-align: center;
   color: #fff;
-  width: 100%;
+  padding: 10px 20px;
   font-size: 1.5em;
-  position: fixed;
-  bottom: 0;
+  font-weight: bold;
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+#footerTxt2 {
+  text-align: center;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  top: 60%;
+  right: 60%;
+  transform: translate(-50%, -50%);
+}
+
+#footerTxt2 img {
+  width: 40px;
+  height: 40px;
 }
 /*# sourceMappingURL=index.c92073ef.css.map */

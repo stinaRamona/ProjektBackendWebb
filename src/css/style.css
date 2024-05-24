@@ -177,12 +177,46 @@ button:hover {
 
 
 /*footer*/
-footer {
-    width: 100%; 
-    position: fixed; 
-    z-index: 100; 
+
+#footerImgWrapper {
+    width:99vw; 
+    height: auto; 
+    position: relative;
+    display: inline-block;
     bottom: 0; 
-    text-align: center;
+} 
+
+#footerImgWrapper img {
+    display: block;
+    width: 100%; 
+    height: auto;
+}
+
+#footerTxt1 {
+    position: absolute; 
+    top: 60%; 
+    left: 80%;
+    transform: translate(-50%, -50%);
+    text-align:center; 
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.5em;
     color: white; 
-    font-size: 1.5em; 
+} 
+
+#footerTxt2 {
+    position: absolute; 
+    top: 60%; 
+    right: 60%;
+    transform: translate(-50%, -50%);
+    text-align:center; 
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+}
+
+#footerTxt2 img {
+    width: 40px; 
+    height: 40px; 
 }
