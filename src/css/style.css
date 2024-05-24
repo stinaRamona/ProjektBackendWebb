@@ -113,7 +113,52 @@ nav a:hover {
     max-width: 34em; 
     margin: 0 auto; 
     line-height: 1.5em;
+} 
+
+/*Logga in sidan*/
+form {
+    width: 90%;  
+    margin: 0 auto;
 }
+
+label {
+    font-weight: bold;
+    font-size: 1.25em; 
+} 
+
+input {
+    margin:1.5%;
+    width:80%; 
+    padding:1em; 
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px 1px #dadada;
+    background-color: transparent;
+} 
+
+#errorDivLogin {
+    color:rgb(200, 0, 0); 
+    margin-left: 5%;  
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+/*Knappar*/
+#loginBtn {
+    background-color: transparent;
+    border: solid 2px #000000; 
+    padding: 1%; 
+    border-radius: 4px;
+    font-size: 1.25em;
+    font-family: "La Belle Aurore", cursive;
+    font-weight: bold; 
+    cursor: pointer;
+    margin: 1.5%;
+} 
+
+#loginBtn:hover {
+    background-color: #009B79;
+}
+
 
 /*footer*/
 footer {

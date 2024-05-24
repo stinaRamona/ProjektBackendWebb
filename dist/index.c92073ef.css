@@ -110,6 +110,48 @@ nav a:hover {
   line-height: 1.5em;
 }
 
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+input {
+  background-color: #0000;
+  border-radius: 5px;
+  width: 80%;
+  margin: 1.5%;
+  padding: 1em;
+  box-shadow: 5px 5px 2px 1px #dadada;
+}
+
+#errorDivLogin {
+  color: #c80000;
+  margin-left: 5%;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#loginBtn {
+  cursor: pointer;
+  background-color: #0000;
+  border: 2px solid #000;
+  border-radius: 4px;
+  margin: 1.5%;
+  padding: 1%;
+  font-family: La Belle Aurore, cursive;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+#loginBtn:hover {
+  background-color: #009b79;
+}
+
 footer {
   z-index: 100;
   text-align: center;
