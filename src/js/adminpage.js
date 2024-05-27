@@ -13,6 +13,12 @@ let menuListAdmin = document.getElementById("menuListAdmin");
 
 //skriver ett meddelande vid inladdning av sidan
 async function init() {
+    //kontroll om token finns 
+    if(!localStorage.getItem('token')){
+        window.location.href = "login.html"
+        return; 
+    }
+
     //hälsar välkommen
     adminHeaderEl.innerHTML = "Välkommen tillbaka " + storedUser;
 
