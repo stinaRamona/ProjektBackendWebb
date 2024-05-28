@@ -5,7 +5,8 @@ body {
 }
 
 main {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -15,7 +16,8 @@ main {
 }
 
 #logoWrapper {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: auto;
   padding: 1%;
 }
@@ -23,7 +25,8 @@ main {
 #heroImgWrapper {
   opacity: .5;
   z-index: -1;
-  width: 99vw;
+  width: 100%;
+  max-width: 100vw;
   height: auto;
   position: absolute;
   top: 0;
@@ -75,11 +78,13 @@ nav a:hover {
 
 #menuDiv {
   text-align: center;
+  padding: 2%;
   font-size: 1.25em;
 }
 
 #blobWrapper {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: auto;
   display: inline-block;
   position: relative;
@@ -174,17 +179,21 @@ button:hover {
 }
 
 #footerImgWrapper {
-  width: 99vw;
+  width: 100%;
+  max-width: 100vw;
   height: auto;
   display: inline-block;
   position: relative;
   bottom: 0;
+  left: 0;
 }
 
 #footerImgWrapper img {
   width: 100%;
   height: auto;
   display: block;
+  bottom: 0;
+  left: 0;
 }
 
 #footerTxt1 {
@@ -214,5 +223,20 @@ button:hover {
 #footerTxt2 img {
   width: 40px;
   height: 40px;
+}
+
+@media (width <= 1155px) {
+  #blobWrapper {
+    max-width: 200px;
+  }
+
+  #blobText {
+    font-size: 2em;
+  }
+
+  #menuDiv {
+    font-size: 1em;
+    overflow: hidden;
+  }
 }
 /*# sourceMappingURL=index.c92073ef.css.map */
