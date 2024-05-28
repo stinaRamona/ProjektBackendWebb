@@ -228,7 +228,7 @@ button:hover {
 
 #footerTxt2 a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 #footerTxt2 a:hover {
@@ -266,14 +266,16 @@ button:hover {
 
   #footerTxt1 {
     padding: 5px;
+    font-size: .75em;
     top: 50%;
     left: 70%;
   }
 
   #footerTxt2 {
     padding: 5px;
+    font-size: .75em;
     top: 50%;
-    right: 40%;
+    right: 50%;
   }
 
   nav {
