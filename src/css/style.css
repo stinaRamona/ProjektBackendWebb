@@ -236,7 +236,7 @@ button:hover {
     height: 40px; 
 }
 
-/*Responsivitet*/
+/*Responsivitet mellanskärmar*/
 @media (max-width:1155px){
     /*Startsidan*/
     #blobWrapper {
@@ -250,5 +250,29 @@ button:hover {
     #menuDiv {
         font-size: 1em;
         overflow: hidden;
+    }
+
+    #footerTxt1, #footerTxt2 {
+        font-size: 1em;
+        white-space: nowrap;
+    }
+} 
+
+/*Responsivitet små skrämar*/
+@media (max-width:760px){
+    #heroImgWrapper{
+        display: none;
+    } 
+
+    #logoWrapper {
+        max-width: 100px;
+    } 
+
+    #footerTxt1 {
+        left: 70%; 
+    }
+
+    #footerTxt2 {
+        right: 40%; 
     }
 }

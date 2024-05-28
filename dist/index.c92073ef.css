@@ -238,5 +238,28 @@ button:hover {
     font-size: 1em;
     overflow: hidden;
   }
+
+  #footerTxt1, #footerTxt2 {
+    white-space: nowrap;
+    font-size: 1em;
+  }
+}
+
+@media (width <= 760px) {
+  #heroImgWrapper {
+    display: none;
+  }
+
+  #logoWrapper {
+    max-width: 100px;
+  }
+
+  #footerTxt1 {
+    left: 70%;
+  }
+
+  #footerTxt2 {
+    right: 40%;
+  }
 }
 /*# sourceMappingURL=index.c92073ef.css.map */
