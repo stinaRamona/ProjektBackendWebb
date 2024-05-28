@@ -118,6 +118,7 @@ nav a:hover {
     max-width: 34em; 
     margin: 0 auto; 
     line-height: 1.5em;
+    padding: 3%;
 } 
 
 /*Logga in sidan*/
@@ -155,7 +156,7 @@ input {
 }
 
 #updateMenuHeader {
-    margin-top: 8%; 
+    margin-top: 8%;  
 }
 
 #logOut {
@@ -296,5 +297,10 @@ button:hover {
     nav a {
         font-size: 1.5em;
     } 
+
+    /*admin*/
+    #adminHeader, #addDishHeader, #updateMenuHeader, #menuListAdmin {
+        padding: 2% !important; 
+    }
 
 }

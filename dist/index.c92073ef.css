@@ -111,6 +111,7 @@ nav a:hover {
 #aboutTxt {
   max-width: 34em;
   margin: 0 auto;
+  padding: 3%;
   font-size: 1.25em;
   line-height: 1.5em;
 }
@@ -281,6 +282,10 @@ button:hover {
 
   nav a {
     font-size: 1.5em;
+  }
+
+  #adminHeader, #addDishHeader, #updateMenuHeader, #menuListAdmin {
+    padding: 2% !important;
   }
 }
 /*# sourceMappingURL=index.c92073ef.css.map */
