@@ -1,8 +1,5 @@
 "use strict"; 
 
-//Hämta in från local storage
-let storedUser = localStorage.getItem('user'); 
-let storedToken = localStorage.getItem('token');
 let adminHeaderEl = document.getElementById("adminHeader");  
 //för formulär 
 let addBtnEl = document.getElementById("addBtn"); 
@@ -13,12 +10,15 @@ let menuListAdmin = document.getElementById("menuListAdmin");
 
 //skriver ett meddelande vid inladdning av sidan
 async function init() {
-    //kontroll om token finns 
-    if(!localStorage.getItem('token')){
-        window.location.href = "login.html"
-        return; 
-    }
+    //Hämta in från local storage
+    let storedUser = localStorage.getItem('user'); 
+    let storedToken = localStorage.getItem('token');
 
+    //kontroll om token finns 
+    if(!storedToken){
+        window.location.href = "login.html" 
+    } else {
+        
     //hälsar välkommen
     adminHeaderEl.innerHTML = "Välkommen tillbaka " + storedUser;
 
@@ -31,6 +31,7 @@ async function init() {
 
     } catch(error) {
         console.log("Något gick fel!" + error); 
+    }
     }
 } 
 
