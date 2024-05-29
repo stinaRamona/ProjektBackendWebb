@@ -1,5 +1,8 @@
 "use strict"; 
 
+let storedUser = localStorage.getItem('user'); 
+let storedToken = localStorage.getItem('token');
+
 let adminHeaderEl = document.getElementById("adminHeader");  
 //för formulär 
 let addBtnEl = document.getElementById("addBtn"); 
@@ -10,20 +13,20 @@ let menuListAdmin = document.getElementById("menuListAdmin");
 
 //skriver ett meddelande vid inladdning av sidan
 async function init() {
-    //Hämta in från local storage
-    let storedUser = localStorage.getItem('user'); 
-    let storedToken = localStorage.getItem('token');
-
-    //kontroll om token finns 
-    if(!storedToken){
-        window.location.href = "login.html" 
-    } else {
         
     //hälsar välkommen
     adminHeaderEl.innerHTML = "Välkommen tillbaka " + storedUser;
 
     try {
-        let response = await fetch("https://projektbackend.onrender.com/api/menu"); 
+        let response = await fetch("https://projektbackend.onrender.com/api/menu", {
+            headers: {
+                'Authorization': `Bearer ${storedToken}`
+            }
+        }); 
+
+        if (!response.ok) {
+            throw new Error('Något gick fel med autentiseringen!');
+        }
 
         let menu = await response.json(); 
 
@@ -31,8 +34,9 @@ async function init() {
 
     } catch(error) {
         console.log("Något gick fel!" + error); 
+        window.location.href = "login.html"; 
     }
-    }
+    
 } 
 
 //hämtar meny och skriver ut så man kan uppdatera och ta bort 
